@@ -14,10 +14,21 @@ public class Etudiant : Person
     }
     public double Average()
     {
-        return 0;
+        int sumOfValues = 0;
+        int sumOfECTS = 0;
+        foreach(Eval eval in evaluations)
+        {
+            sumOfValues += eval.activite.ECTS * eval.Note();
+            sumOfECTS = eval.activite.ECTS;
+        }
+        return sumOfValues/sumOfECTS;
     }
     public string Bulletin()
     {
-        return "space";
+        foreach(Eval eval in evaluations)
+        {
+            string.Format("Pour le cours de {0}, vous avez une note de {1}. {2} Crédits",eval.activite.Name,eval.Note(),eval.activite.ECTS);
+        }
+        string.Format("Pour une fabuleuse moyenne de {0}. Bravo {1}!",Average(),displayName());
     }
 }
