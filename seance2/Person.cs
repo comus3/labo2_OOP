@@ -13,4 +13,16 @@ public class Person
     {
         return firstName + " " + lastName;
     }
+    public string FirstName
+    {
+        get {
+            return firstName;
+        }
+    }
+    public string LasttName
+    {
+        get {
+            return lastName;
+        }
+    }
 }
