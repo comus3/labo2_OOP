@@ -1,9 +1,10 @@
 ﻿namespace seance2;
 
-public class Appreciation
+public class Appreciation : Eval
 {
     private string appreciation;
-    public Appreciation(string appreciation)
+    public Appreciation(string appreciation,Activite activite):
+    base(activite)
     {
         this.appreciation = appreciation;
     }
