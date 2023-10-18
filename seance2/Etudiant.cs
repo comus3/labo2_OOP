@@ -14,16 +14,16 @@ public class Etudiant : Person
     }
     public double Average()
     {
-        int numOfEval
+        int numOfEval = 0;
         int sumOfValues = 0;
         int sumOfECTS = 0;
         foreach(Eval eval in evaluations)
         {
-            numOfEval += 1
+            numOfEval += 1;
             sumOfValues += eval.activite.ECTS * eval.Note();
             sumOfECTS = eval.activite.ECTS;
         }
-        return (sumOfValues/sumOfECTS)/numOfEval;
+        return sumOfValues/sumOfECTS/numOfEval;
     }
     public string Bulletin()
     {
