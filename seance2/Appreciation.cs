@@ -10,10 +10,11 @@ public class Appreciation : Eval
     }
     public override int Note()
     {
-        if (appreciation == "A"){return 20;}else if (appreciation == "B"){return 16;}
-        else if (appreciation == "C"){return 12;}
-        else if (appreciation == "D"){return 8;}
-        else if (appreciation == "E"){return 4;}
+        if (appreciation == "X"){return 20;}
+        else if (appreciation == "TB"){return 16;}
+        else if (appreciation == "B"){return 12;}
+        else if (appreciation == "C"){return 8;}
+        else if (appreciation == "N"){return 4;}
         else{return 0;}
     }
     public void setNote(string note)
