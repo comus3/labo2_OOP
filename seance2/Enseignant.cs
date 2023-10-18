@@ -12,4 +12,8 @@ public class Enseignant : Person
     {
         salaire += amt;
     }
+    public string ReturnSalary()
+    {
+        return salaire.ToString();
+    }
 }
