@@ -25,10 +25,12 @@ public class Etudiant : Person
     }
     public string Bulletin()
     {
+        string output = "";
         foreach(Eval eval in evaluations)
         {
-            string.Format("Pour le cours de {0}, vous avez une note de {1}. {2} Crédits",eval.activite.Name,eval.Note(),eval.activite.ECTS);
+            output += string.Format("Pour le cours de {0}, vous avez une note de {1}. {2} Crédits",eval.activite.Name,eval.Note(),eval.activite.ECTS);
         }
-        string.Format("Pour une fabuleuse moyenne de {0}. Bravo {1}!",Average(),displayName());
+        output += string.Format("Pour une fabuleuse moyenne de {0}. Bravo {1}!",Average(),displayName());
+        return output;
     }
 }
