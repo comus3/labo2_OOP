@@ -8,11 +8,9 @@ public class Cote : Eval
         this.note = note;
 
     }
-    public int Note
+    public override int Note()
     {
-        get {
-            return note;
-        }
+        return note;
     }
     public void SetNote(int note)
     {

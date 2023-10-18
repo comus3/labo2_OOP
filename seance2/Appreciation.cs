@@ -8,7 +8,7 @@ public class Appreciation : Eval
     {
         this.appreciation = appreciation;
     }
-    public int Note()
+    public override int Note()
     {
         if (appreciation == "A"){return 20;}else if (appreciation == "B"){return 16;}
         else if (appreciation == "C"){return 12;}
